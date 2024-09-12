@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoimmune Disease</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Black background */
+        body {
+            background-color: #000000;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Hover effect with shadow and scale */
+        .hover-effect:hover {
+            color: #ff7e5f;
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        /* Infinite border color animation for logo */
+        @keyframes border-color-change {
+            0% { border-color: #ff7e5f; }
+            50% { border-color: #feb47b; }
+            100% { border-color: #ff7e5f; }
+        }
+        .logo-animation {
+            animation: border-color-change 3s infinite linear;
+        }
+
+        /* Styling links section */
+        .link-section {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            text-align: center;
+        }
+        .link-section a {
+            display: inline-block;
+            color: white;
+            background: #000000;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 30px;
+            transition: background 0.3s ease;
+        }
+
+        /* Carousel styling */
+        /* .carousel-images {
+            display: flex;
+            overflow: hidden;
+            width: 50%;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+        .carousel-images img {
+            min-width: 100%;
+            transition: transform 0.5s ease;
+        } */
+        /* Carousel container */
+    .carousel-images {
+    display: flex;
+    overflow: hidden;
+    width: 100%; /* Make it wider for laptop, adjust as needed */
+    max-width: 500px; /* Limit width for large screens */
+    margin: 0 auto; /* Center the carousel */
+    border-radius: 20px; /* Add smooth rounded corners */
+    }
+
+/* Carousel images */
+    .carousel-images img {
+    min-width: 100%; /* Ensure each image takes full width of the container */
+    transition: transform 0.5s ease; /* Smooth transition when sliding */
+    object-fit: cover; /* Ensures image covers container without distortion */
+    border-radius: 8px; /* Consistent rounded corners for images */
+    }
+
+/* Media query for mobile */
+    @media (max-width: 768px) {
+    .carousel-images {
+        width: 100%; /* Full width on mobile */
+        border-radius: 5px;
+    }
+    .carousel-images img {
+        border-radius: 5px; /* Slightly smaller rounding for mobile */
+    }
+    }
+
+
+
+        /* Button styling */
+        .custom-button {
+            background: #ff7e5f;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: background 0.3s;
+        }
+        .custom-button:hover {
+            background: #feb47b;
+        }
+
+    </style>
+</head>
+<body class="h-[100vh]">
+    <!-- Navigation Bar -->
+    <div class="nav w-full h-32 bg-transparent flex justify-between px-8 py-5 items-center shadow-lg">
+        <img class="w-32 h-32 object-cover rounded-full border-4 logo-animation mt-5" src="Wellness.jpg" alt="Wellness Logo">
+        <ul class="text-white font-mono flex space-x-10 text-xl">
+            <li class="hover-effect" onclick="scrollToTop()">Home</li>
+            <li class="hover-effect" onclick="scrollToMission()">Mission</li>
+            <li class="hover-effect" onclick="scrollToVision()">Vision</li>
+            <li class="hover-effect" onclick="scrollToObjective()">Objective</li>
+            <li class="hover-effect" onclick="scrollToPhotos()">Content</li>
+            <li class="hover-effect" onclick="scrollToLinks()">Links</li>
+        </ul>
+    </div>
+
+    <!-- Title Section -->
+    <div class="home w-full flex items-center justify-center mt-10">
+        <h1 class="gradient-text font-mono font-extrabold text-6xl">AUTOIMMUNE DISEASE</h1>
+    </div>
+
+    <!-- Mission Section -->
+    <div id="mission" class="w-full text-white font-mono p-10">
+        <h2 class="text-4xl text-blue-300 font-extrabold">Mission</h2>
+        <p class="mt-4">
+            To raise awareness, educate the public on prevention and management strategies, and support individuals living with autoimmune diseases through impactful campaigns and resources.</p>
+    </div>
+
+    <!-- Vision Section -->
+    <div id="vision" class="w-full text-white font-mono p-10">
+        <h2 class="text-4xl text-blue-300 font-extrabold">Vision</h2>
+        <p class="mt-4">
+            To build a well-informed society that understands, prevents, and effectively manages autoimmune diseases, ensuring better health outcomes for all.</p>
+    </div>
+
+    <!-- Objective Section -->
+    <div id="objective" class="w-full text-white font-mono p-10">
+        <h2 class="text-4xl text-blue-300 font-extrabold">Objective</h2>
+        <p class="mt-4">
+            To spread awareness about the daily challenges faced by autoimmune patients, promote preventive measures, and empower individuals to overcome these conditions with informed care & support.</p>
+    </div>
+
+    <!-- Content Section -->
+    <div class="mis-box w-full flex flex-col md:flex-row justify-between p-10">
+        <div class="w-full md:w-[45%] text-white font-mono font-semibold">
+            <h2 class="text-2xl text-blue-300 mb-4">What is AUTOIMMUNE DISEASE?</h2>
+            <p class="leading-relaxed">Autoimmune diseases occur when the body's immune system mistakenly attacks its own healthy cells and tissues. Normally, the immune system defends the body against harmful invaders like viruses and bacteria, but in the case of autoimmune disorders, it fails to recognize the body’s cells as "self" and starts attacking them.</p>
+            <h2 class="mt-10 text-2xl font-semibold text-blue-300">Symptoms of AUTOIMMUNE DISEASE</h2>
+            <img class="mt-4 w-full object-cover rounded-lg shadow-md hover:scale-105 transition-all" src="Auto-Immune_Diseases.webp" alt="Symptoms">
+            <img class="w-full object-cover mt-4 rounded-lg shadow-md hover:scale-105 transition-all" src="uuuu.avif" alt="Additional Image">
+        </div>
+        <div class="w-full md:w-[45%] mt-10 md:mt-0">
+            <img class="w-full object-cover rounded-lg shadow-md hover:scale-105 transition-all" src="Screenshot 2024-09-09 225747.png" alt="Illustration">
+        </div>
+    </div>
+
+    <!-- Auto Scrollable Photo Carousel -->
+    <div id="photos" class="photos mt-50 p-50">
+        <h2 class="text-white font-mono font-extrabold text-4xl mb-6">Autoimmune Disease awareness campaign</h2>
+        <div class="carousel-images rounded-lg overflow-hidden shadow-lg">
+            <img class="object-cover" src="WhatsApp Image 2024-09-12 at 00.17.33.jpeg" alt="Photo 1">
+            <img class="object-cover" src="WhatsApp Image 2024-09-12 at 00.30.51.jpeg" alt="Photo 2">
+            <img class="object-cover" src="WhatsApp Image 2024-09-12 at 00.19.16.jpeg" alt="Photo 2">
+            <img class="object-cover" src="WhatsApp Image 2024-09-06 at 17.27.01.jpeg" alt="Photo 3">
+            <img class="object-cover" src="WhatsApp Image 2024-09-12 at 00.20.41 (1).jpeg" alt="Photo 4">
+            <img class="object-cover" src="WhatsApp Image 2024-09-06 at 17.33.57.jpeg" alt="Photo 5">
+            <img class="object-cover" src="WhatsApp Image 2024-09-12 at 00.19.16 (1).jpeg" alt="Photo 6">
+            <img class="object-cover" src="WhatsApp Image 2024-09-12 at 00.20.41.jpeg" alt="Photo 7">
+            <img class="object-cover" src="WhatsApp Image 2024-09-10 at 18.38.58_92f5e067.jpg" alt="Photo 8">
+            <img class="object-cover" src="WhatsApp Image 2024-09-09 at 23.16.12_ffa8ac28.jpg" alt="Photo 9">
+            
+
+            
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <div class="video mt-10 p-10">
+        <h2 class="text-white font-mono font-extrabold text-4xl mb-6">Video of Autoimmune Disease Awareness campaign</h2>
+        <div class="relative h-60">
+            <video controls class="absolute inset-0 w-full h-full object-cover rounded-lg shadow-lg">
+                <source src="InShot_20240908_221806283.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <!-- Video Section -->
+   
+
+    <!-- Links Section -->
+    <div id="links" class="link-section mt-10">
+        <h2 class="text-white font-mono font-extrabold text-4xl mb-6">Follow us on Instagram</h2>
+        <div class="flex justify-center">
+            <a href="https://www.instagram.com/wellness_warriors593?utm_source=qr&igsh=amtnZzI3enRoN2h3 " target="_blank">
+                <img class="w-10 h-10 object-cover" src="752177-3840x2160-desktop-4k-instagram-logo-wallpaper-photo.jpg" alt="Instagram Logo">
+            </a>
+        </div>
+    </div>
+
+    <!-- Scroll-to-sections -->
+    <script>
+        function scrollToPhotos() {
+            document.getElementById('photos').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToLinks() {
+            document.getElementById('links').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToMission() {
+            document.getElementById('mission').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToVision() {
+            document.getElementById('vision').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToObjective() {
+            document.getElementById('objective').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Auto-scroll for the image carousel
+        const carouselImages = document.querySelector('.carousel-images');
+        let scrollAmount = 0;
+
+        function autoScrollImages() {
+            scrollAmount += carouselImages.offsetWidth;
+            if (scrollAmount >= carouselImages.scrollWidth) {
+                scrollAmount = 0;
+            }
+            carouselImages.scrollTo({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+
+        setInterval(autoScrollImages, 3000); // Scroll every 3 seconds
+    </script>
+</body>
+</html>
